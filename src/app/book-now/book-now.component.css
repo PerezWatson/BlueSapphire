@@ -1,0 +1,579 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Playwrite+BE+WAL+Guides&family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+BE+WAL+Guides&family=Roboto+Slab:wght@500&display=swap');
+
+*,
+*:before,
+*:after{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+.booking-frame{
+    background:linear-gradient(rgba(27, 36, 27, 0.3),rgba(36, 41, 36, 0.3)), url('../../../public/images/backImage.jpg') ;
+    background-repeat: no-repeat;
+    background-size:cover;
+    min-height: 100vh;
+    max-height:auto;
+    width:100%;
+    display:flex;
+    flex-flow:column nowrap;
+    align-items:center;
+    justify-content:start;
+    gap:0;
+    padding-bottom:5px;
+
+    
+   animation:background 7s ease-in-out infinite;
+}
+
+@keyframes background{
+  0%{
+    background:linear-gradient(rgba(27, 36, 27, 0.3),rgba(36, 41, 36, 0.3)),url('../../../public/images/ukumbi.jpg') ;
+    background-repeat: no-repeat;
+    background-size:cover;
+    
+  }
+  50%{
+    background:linear-gradient(rgba(27, 36, 27, 0.3),rgba(36, 41, 36, 0.3)), url('../../../public/images/backImage.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+  }
+  100%{
+        background:linear-gradient(rgba(27, 36, 27, 0.3),rgba(36, 41, 36, 0.3)), url('../../../public/images/ukumbi.jpg') ;
+        background-repeat: no-repeat;
+        background-size:cover;
+      }
+}
+
+.socio-nav{
+  position:fixed;
+  top:5px;
+  right:5px;
+  min-width:120px;
+  height:30px;
+  display:flex;
+  flex-flow:row nowrap;
+  align-items:center;
+  justify-content:center;
+  gap:5px;
+}
+.socio-nav div{
+  width:32%;
+  height:100%;
+}
+.socio-nav div a{
+  display:inline-block;
+  width:90%;
+  height:100%;
+}
+.socio-nav div a img{
+  display:inline-block;
+  width:100%;
+  height:100%;
+  background:lime;
+  border-radius:50%;
+}
+.socio-nav div a img:hover{
+  transform:scale(1.08);
+}
+
+.booking-page{                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+     width:80vw;
+     height:auto;
+     display:flex;
+     flex-flow:column nowrap;
+     justify-content: center;
+     align-items:center;
+     gap:0;
+     background: white;
+     background-size:cover;
+     border-radius:5px;
+     box-shadow:0 0 2px gray;
+     margin:auto auto;
+     padding:0;
+}
+
+.booking-content{
+    width:100%;
+    height:auto;
+    border:none;
+
+    display:flex;
+    flex-flow:row wrap;
+    align-items:center;
+    justify-content:space-around;
+    border-radius:5px 5px 0 0;
+}
+.header{
+    width:100%;
+    height:150PX;
+    display:block;
+    border-radius:5px 5px 0 0;
+}
+.header .img{
+   width:100%;
+   height:100%;
+   border-radius:5px 5px 0 0;
+   background:linear-gradient(rgba(27, 36, 27, 0.3),rgba(36, 41, 36, 0.3)), url('../../../public/images/WEB-BANNER.png') ;
+   background-repeat: no-repeat;
+   background-size:100% 100%;
+
+}
+
+
+.select-hall-size,
+.date-from,
+.date-to{
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content:end;
+    align-items:end;
+    gap:0;
+    padding:0;
+    margin-top:20px;
+    height:16vh;
+    width:17%;
+}
+
+.select-hall-size p{
+  width:100%;
+  height:auto;
+  font-size:13px;
+  margin:0;
+  color:darkblue;
+
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.select-hall-size select{
+  width:100%;
+  height:70px;
+  margin:0;
+  padding:5px;
+  border-radius:5px;
+  border:1px solid gray;
+  outline:none;
+  color:black;
+}
+
+#startdate,
+#enddate{ 
+  width:100%;
+  min-height:40px;
+  margin:0;
+  border:1px solid gray;
+  border-radius:5px;
+  color:gray; 
+  outline:none;
+  padding:5px;
+  padding-left:2vw;
+  display:block;
+} 
+
+.check-availabilty{
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content:center;
+    align-items:center;
+    height:15vh;
+    width:16%;
+}
+.select-hall-size div,
+.date-from div,
+.date-to  div{
+    width:100%;
+    height:100%;
+    padding:0;
+    margin:0;
+
+}
+
+.select-hall-size small,
+.date-from small,
+.date-to small{
+    width:100%;
+    height:auto;
+    color:red;
+    font-size:13px;
+    text-align:left;
+}
+
+.date-from p,.date-to p{
+    width:100%;
+    font-size:13px;
+    margin:0;
+    color:darkblue;
+
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.date-from .note ,
+.date-to .note{
+    display:none;
+}
+
+.booking-message-response{
+    margin-top:5px;
+    margin-bottom:10px;
+    height:auto;
+    font-size: 16px;
+    text-align:center;
+}
+.booking-message-response p{
+    width:100%;
+    height:auto;
+    color:red;
+}
+
+#startdate.ng-touched.ng-invalid,
+#enddate.ng-touched.ng-invalid,
+select.ng-invalid.ng-touched{
+    border: 0.5px solid red;
+}
+#startdate.ng-touched.ng-valid,
+#enddate.ng-touched.ng-valid,
+select.ng-valid.ng-touched{
+    border: 0.5px solid darkblue;
+}
+#startdate.ng-untouched,
+#endate.ng-untouched,
+select.ng-untouched {
+    border: 1px solid gray;
+  }
+  
+  #startdate.ng-untouched:focus,
+  #endate.ng-untouched:focus,
+  select.ng-untouched:focus {
+    border-color: #007bff; /* Change border color on focus */
+}
+.disabled{
+  color:white;
+  width:100%;
+  height:50%;
+  border:none;
+  font-size:12px;
+  border-radius:20px;
+  background:rgba(0,0,139,0.5);
+}  
+.enabled{
+  width:100%;
+  height:50%;
+  border:none;
+  font-size:12px;
+  border-radius:20px;
+  background:darkblue;
+  color:white;
+
+  animation:dynamic 0.3s linear 3;
+  transition: width 0.2s linear;
+}
+@keyframes dynamic{
+    from{ 
+        transform:scale(1.0);
+    }
+    to{
+        transform:scale(1.02);
+    }
+}
+.enabled:hover{
+    width:105%;
+}
+
+.show-error{
+    width:100vw;
+    height:100vh;
+    background:rgba(0,0,0,0.9);
+    position:fixed;
+    left:0;
+}
+.error{
+    width:100vw;
+    height:auto;
+    padding:20px 0px;
+    margin-top:48vh;
+    background:white;
+    text-align:center;
+}
+.error p{
+    color:red;
+    width:80%;
+    height:auto;
+    margin:auto;
+}
+
+@media (max-width:500px){
+    .booking-frame{
+        display:block;
+        background:linear-gradient(rgba(27, 36, 27, 0.5),rgba(36, 41, 36, 0.5)), url('./../../../public/images/backImage.jpg') ;
+        background-repeat: no-repeat;
+        background-size:cover;
+    
+        display:flex;
+        flex-flow:column nowrap;
+        align-items:center;
+        justify-content:start;
+        gap:0;
+        margin:0;
+        padding:0;
+    }    
+ .booking-page{
+    width:100%;
+    box-shadow:0 0 3px lime 0 0 3px lime;
+    
+    
+ }
+
+ .header{
+  width:100%;
+  height:300PX;
+  display:block;
+}
+
+.header .img{
+ width:100%;
+ height:100%;
+ 
+ background:linear-gradient(rgba(27, 36, 27, 0.3),rgba(36, 41, 36, 0.3)), url('../../../public/images/banner phone.png') ;
+ background-repeat: no-repeat;
+ background-size:100% 100%;
+}
+
+ .booking-content{
+    width:100%;
+    height:auto;
+    border:none;
+    
+    display:flex;
+    flex-flow:column nowrap;
+    align-items:center;
+    gap:0;
+    margin:0;
+    padding:0;
+ }
+
+.select-hall-size,.date-from,.date-to{
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content:center;
+    align-items:center;
+    gap:0;
+    padding:0;
+    height:auto;
+    width:90%;
+}
+
+.check-availabilty{
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content:center;
+    align-items:center;
+    border-radius:5px;
+    height:40px;
+    width:60%;
+    margin: 12px auto;
+}
+
+.select-hall-size select{
+    width:100%;
+    height: 40px;
+    padding:5px;
+    border-radius:5px;
+    /* background:#D7D3D3; */
+    color:gray;
+    font-size:16px;
+}
+
+.select-hall-size div,
+.date-from div,
+.date-to  div{
+    width:100%;
+    height:100%;
+    padding:0;
+    margin:0;
+    text-align:left;
+}
+
+.select-hall-size small,
+.date-from small,
+.date-to small{
+    width:100%;
+    height:auto;
+    color:red;
+    font-size:13px;
+    text-align:left;
+     padding-left:5px;
+}
+
+.startdate,
+.enddate{ 
+  display:none;
+  width:100%;
+  height:40px;
+  margin:0;
+  border:1px solid gray;
+  border-radius:20px;
+  color:gray; 
+  outline:none;
+  padding:5px;
+  padding-left:2vw;
+}  
+
+.check-availabilty .enabled, .disabled{
+    border-radius:20px;
+    width:90%;
+    height:100%;
+    padding:15px;
+    margin-top:10px;
+
+}
+
+#toastBox {
+    position:absolute;
+    z-index:6000;
+       top:10vh;
+       display:flex;
+       align-items:center;
+       justify-content: center;
+       flex-flow:column nowrap;
+       overflow:hidden;
+       padding:10px;
+       max-width:90%;
+       
+  }
+  
+  ::ng-deep .toast{
+    background: white;
+    width: 250px;
+    height: auto;
+    font-weight: normal;
+    text-align:center;
+    font-size: 16px;
+    margin: 5px aut0;
+    padding: 10px;
+    box-shadow: 0 0 20px gray;
+    position: relative;
+    transform: translateX(100%);
+    animation: moveleft .5s linear forwards;
+  }
+  
+  @keyframes moveleft {
+    100% {
+      transform: translateX(0%);
+      margin:auto;
+    }
+  }
+  
+  ::ng-deep .toast i{
+    color: green;
+  }
+  
+  ::ng-deep .toast.invalid i {
+    color: orange;
+  }
+  
+  ::ng-deep .toast.error i {
+    color: red;
+  }
+  
+  ::ng-deep .toast::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background: green;
+    animation: anim 2.8s linear forwards;
+  }
+  
+  @keyframes anim{
+    100% {
+      width: 0;
+    }
+  }
+  
+  ::ng-deep .toast.error::after {
+    background: red;
+  }
+  
+  ::ng-deep .toast.invalid::after {
+    background: orange;
+  }
+}
+
+/* CSS for notification */
+#toastBox {
+  position:absolute;
+  z-index:6000;
+	 bottom:30px;
+	 right:30px;
+	 display:flex;
+	 align-items:flex-end;
+	 flex-flow:column nowrap;
+	 overflow:hidden;
+	 padding:20px;
+}
+
+::ng-deep .toast{
+  background: white;
+  width: 400px;
+  height: auto;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 5px auto;
+  padding: 10px;
+  box-shadow: 0 0 20px gray;
+  position: relative;
+  transform: translateX(100%);
+  animation: moveleft .5s linear forwards;
+}
+
+@keyframes moveleft {
+  100% {
+    transform: translateX(0);
+  }
+}
+
+::ng-deep .toast i{
+  color: green;
+}
+
+::ng-deep .toast.invalid i {
+  color: orange;
+}
+
+::ng-deep .toast.error i {
+  color: red;
+}
+
+::ng-deep .toast::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  background: green;
+  animation: anim 1.8s linear forwards;
+}
+
+@keyframes anim {
+  100% {
+    width: 0;
+  }
+}
+
+::ng-deep .toast.error::after {
+  background: red;
+}
+
+::ng-deep .toast.invalid::after {
+  background: orange;
+}
+

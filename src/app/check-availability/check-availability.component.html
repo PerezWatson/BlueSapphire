@@ -1,0 +1,51 @@
+<!-- below is form that complete booking of the form -->
+<form class="form" #bookingForm="ngForm" (ngSubmit)="onBookingFormSubmitted()">
+    <!-- this is division that take personal details of the user -->
+    <div class="details"> 
+        <!-- section that takes full client name -->
+        <section class="full-name">
+            <label for="name">Full Name</label>
+            <input type="text" placeholder="Enter your name" id="name" name="fullName" ngModel #funame="ngModel" required>
+            <p *ngIf="funame.invalid && funame.touched">*required</p>
+        </section>
+
+        <section class="address">
+            <!-- section that takes client physical address details -->
+            <label for="address">Physical Address</label>
+            <input type="text" placeholder="Enter your address" id="address" name="address" ngModel #address="ngModel" required>
+            <p *ngIf="address.invalid && address.touched">*required</p>
+        </section>
+
+        <div class="details1">
+        <div class="details11">    
+            <!-- section that takes client email -->
+        <section class="email">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" name="email" required ngModel #email="ngModel">
+            <p *ngIf="email.invalid && email.touched">*required</p>
+        </section>
+
+        <!-- section that takes full client phonenumber -->
+        <section class="number">
+            <label for="number">Phone Number</label>
+            <input type="number" id="number" placeholder="Enter your phone number" name="phoneNumber" required ngModel #phoneNumber="ngModel">
+            <p *ngIf="phoneNumber.invalid && phoneNumber.touched">*required</p>
+        </section>
+        </div>
+
+        <!-- section that takes remarks from the  client -->
+         <section class="remarks">
+            <label for="remarkBox">Remarks:</label>
+            <textarea id="remarkBox" placeholder="Please provide your suggestions or opinions to our service" name="views" ngModel #views="ngModel"></textarea>
+        </section>
+        </div>
+
+        <!-- section that responsible for form submission -->
+        <section class="submit">
+            <button type="submit"
+            (click)="hideForm()"
+             [disabled]="bookingForm.invalid"
+             [ngClass]="{'disabled':bookingForm.invalid, 'enabled':bookingForm.valid}">Submit</button>
+        </section>
+    </div>
+</form>

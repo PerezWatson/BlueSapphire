@@ -1,0 +1,77 @@
+<section class="show-error" *ngIf="errorMessage">
+    <div class="error">
+        <p></p>
+    </div>
+ </section>
+
+
+<!-- below is the div for toasting notification according to result from API on final submission --> 
+ <div id="toastBox" #toastBox></div>
+ <!-- below is the outermost div of which cover whole landpage -->
+ <div class="booking-frame"> 
+    <!-- fixed navigation for blue sapphire hall social medias -->
+    <section class="socio-nav">
+        <!-- <div><a href='https://www.facebook.com'><img src="images/facebook.png" title='visit our facebook page'></a></div> -->
+        <div><a href='https://www.instagram.com/blue.sapphire.hall?igsh=a3phNnU1MGExbGJr'><img src="images/insta.jpg" title='visit our instagram page'></a></div>
+        <div><a href='https://wa.me/255685449193'><img src='images/whatsap.jpg' title='cantact us via whatsap'></a></div>
+      </section>
+<!-- below is the first div form of which has banner + check availability + final booking booking -->
+ <div class="booking-page" >
+<!-- below is the for checking availability as step 1 -->
+   <form class="booking-content" #checkForm="ngForm" (ngSubmit)="submit()">
+    <!-- section 1:top banner -->
+    <section class="header">
+        <div class="img"></div>
+    </section>
+
+ <!-- section 2:hall size select field -->
+    <section class="select-hall-size">
+        <p>Select hall:</p>
+        <select  name="space" required ngModel #space="ngModel">
+            <option value =""  hidden>Select hall here</option>
+            <ng-container *ngFor="let space of bookingSpace">
+                <option [value]="space.name1">{{space.name1}} [ {{space.capacity}} peoples]</option>
+            </ng-container>
+        </select>
+        <div >
+            <small *ngIf=" space.touched&&space.invalid" >*required</small>
+        </div>
+    </section>
+    
+     <!-- section 3:check In date field -->
+    <section class="date-from">
+        <p>Check In :</p>
+        <input id="startdate" class="enddate" type="text" #datePicker1 Placeholder="select a date" required name="start" ngModel #start="ngModel" [(ngModel)]="startDate" />
+        <div>
+            <small  *ngIf=" start.touched&&start.invalid">*required</small>
+        </div>
+        </section>
+
+         <!-- section 4:check out field -->
+    <section class="date-to">
+        <p>Check Out :</p>
+        <input id="enddate" class="enddate" type="text" #datePicker2 Placeholder="select a date" required name="end" ngModel #end="ngModel" [(ngModel)]="endDate" />
+        <div>
+            <small  *ngIf=" end.touched&&end.invalid">*required</small>
+        </div>
+        </section>
+
+         <!-- section 5:check availability button -->
+    <section class="check-availabilty">
+        <input type="submit" value="CHECK AVAILABILITY" 
+        [disabled]="checkForm.invalid"
+        [ngClass]="{'disabled':checkForm.invalid, 'enabled':checkForm.valid}">
+        </section>
+    </form>
+<!-- section 5:ifa no vailabity response will be shown below -->
+<section class="booking-message-response" *ngIf="!availabilityStatus">
+    <p>{{ bookingMessage}}</p>
+ </section>
+
+ <!-- below is the checking availability component which wiil be rendered if there is hall availability for booking completion -->
+<app-check-availability  *ngIf="availabilityStatus" (hide)="hideForm($event)" [UsersTime]="UserTime" (loader)="displayLoader($event)"></app-check-availability>
+</div>
+</div>
+
+<!-- below is loader component which will be rendered in some cases -->
+<app-submit *ngIf="showLoader"></app-submit>
